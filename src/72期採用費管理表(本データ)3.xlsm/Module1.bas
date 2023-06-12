@@ -1,8 +1,6 @@
 Attribute VB_Name = "Module1"
 Option Explicit
 
-'GIT　テストです
-
 Sub CommandButton1_Click()
     '選択したファイル名を表示
     Dim PathName1   As String: PathName1 = Application.GetOpenFilename("Excelブック,*.xls;*.xlsx;*.xlsm")
