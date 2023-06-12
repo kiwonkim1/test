@@ -1,7 +1,6 @@
 static/
 env/.env
 **/__pycache__/
-*.xlsm
 **/*.accdb
 **/*.laccdb
 **/*.exe
