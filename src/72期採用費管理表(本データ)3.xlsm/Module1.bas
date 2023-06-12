@@ -1,16 +1,18 @@
 Attribute VB_Name = "Module1"
 Option Explicit
 
+'GITã€€ãƒ†ã‚¹ãƒˆã§ã™
+
 Sub CommandButton1_Click()
-    '‘I‘ğ‚µ‚½ƒtƒ@ƒCƒ‹–¼‚ğ•\¦
-    Dim PathName1   As String: PathName1 = Application.GetOpenFilename("ExcelƒuƒbƒN,*.xls;*.xlsx;*.xlsm")
+    'é¸æŠã—ãŸãƒ•ã‚¡ã‚¤ãƒ«åã‚’è¡¨ç¤º
+    Dim PathName1   As String: PathName1 = Application.GetOpenFilename("Excelãƒ–ãƒƒã‚¯,*.xls;*.xlsx;*.xlsm")
     Dim wb As Workbook
     If PathName1 <> "False" Then
-        'ƒtƒ@ƒCƒ‹‚ªw’è‚³‚ê‚½ê‡
-        Sheets("72Šú Œ³ƒf[ƒ^").Cells(3, 5).Value = PathName1
+        'ãƒ•ã‚¡ã‚¤ãƒ«ãŒæŒ‡å®šã•ã‚ŒãŸå ´åˆ
+        Sheets("72æœŸ å…ƒãƒ‡ãƒ¼ã‚¿").Cells(3, 5).Value = PathName1
         
     Else
-        'ƒLƒƒƒ“ƒZƒ‹‚Í‰½‚à‚µ‚È‚¢
+        'ã‚­ãƒ£ãƒ³ã‚»ãƒ«æ™‚ã¯ä½•ã‚‚ã—ãªã„
         Exit Sub
 
     End If
@@ -24,10 +26,10 @@ Dim wb As Workbook
 Dim PathName1 As String
 Dim Answer As Byte
     
-    Answer = MsgBox("ƒtƒ@ƒCƒ‹‚ğŠJ‚«‚Ü‚·‚©H", vbYesNo + vbQuestion)
+    Answer = MsgBox("ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ãã¾ã™ã‹ï¼Ÿ", vbYesNo + vbQuestion)
     
     If Answer = vbYes Then
-    PathName1 = Sheets("72Šú Œ³ƒf[ƒ^").Cells(3, 5).Value
+    PathName1 = Sheets("72æœŸ å…ƒãƒ‡ãƒ¼ã‚¿").Cells(3, 5).Value
     
         If Dir(PathName1) <> "" Then
             On Error Resume Next
@@ -37,10 +39,10 @@ Dim Answer As Byte
             If Not wb Is Nothing Then
                 wb.Sheets(2).Range("A1").Activate
             Else
-                MsgBox "ƒtƒ@ƒCƒ‹ƒAƒhƒŒƒX‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢B"
+                MsgBox "ãƒ•ã‚¡ã‚¤ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚"
             End If
     Else
-            MsgBox "ƒtƒ@ƒCƒ‹ƒAƒhƒŒƒX‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢B"
+            MsgBox "ãƒ•ã‚¡ã‚¤ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚"
         End If
     End If
 End Sub
