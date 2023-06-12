@@ -2,19 +2,19 @@ Attribute VB_Name = "Module1"
 Option Explicit
 
 
-
+'TEST
 Sub CommandButton1_Click()
-    '‘I‘ğ‚µ‚½ƒtƒ@ƒCƒ‹–¼‚ğ•\¦
+    'é¸æŠã—ãŸãƒ•ã‚¡ã‚¤ãƒ«åã‚’è¡¨ç¤º
     Dim PathName As String
 
-    PathName = Application.GetOpenFilename("ExcelƒuƒbƒN,*.xls;*.xlsx;*.xlsm")
+    PathName = Application.GetOpenFilename("Excelãƒ–ãƒƒã‚¯,*.xls;*.xlsx;*.xlsm")
     
     If PathName <> "False" Then
-        'ƒtƒ@ƒCƒ‹‚ªw’è‚³‚ê‚½ê‡
+        'ãƒ•ã‚¡ã‚¤ãƒ«ãŒæŒ‡å®šã•ã‚ŒãŸå ´åˆ
         Sheets(3).Cells(3, 5).Value = PathName
         
     Else
-        'ƒLƒƒƒ“ƒZƒ‹‚Í‰½‚à‚µ‚È‚¢
+        'ã‚­ãƒ£ãƒ³ã‚»ãƒ«æ™‚ã¯ä½•ã‚‚ã—ãªã„
         Exit Sub
         
     End If
